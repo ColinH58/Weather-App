@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <p>This is my New Weather App</p>
     </div>
   );
