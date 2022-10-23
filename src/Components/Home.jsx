@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
   return (
     <div>
-        <h1>This is my weather app!</h1>
+        <h1>This is my weather app! LMAO</h1>
     </div>
   )
 }
