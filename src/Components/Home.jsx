@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const Home = () => {
   return (
     <div>
-        <h1>This is my weather app! Test this change</h1>
+        <h1>This will be the main landing page to show the returned information</h1>
     </div>
   )
 }
 
-export default Home;
+export default Home

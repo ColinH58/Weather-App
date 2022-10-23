@@ -1,9 +1,10 @@
 import React from 'react';
-import { Home } from "./Components";
+import { Home, Navbar } from "./Components";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Home />
     </div>
   );
