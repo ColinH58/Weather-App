@@ -1,9 +1,10 @@
 import React from 'react';
+import { Home } from "./Components/index";
 
 function App() {
   return (
     <div>
-      <p>This is my New Weather App</p>
+      <Home />
     </div>
   );
 }
