@@ -16,17 +16,33 @@ fetch(`${BASE_URL}/weather/forecast/hourly?lat=42.8237618&lon=-71.2216286&fields
 
 // Short Term Forecast (Nowcast)
 export async function getForecast(lat, lon, fields) {
-    const response = await fetch(`${BASE_URL}/weather/nowcast?lon=${lon}&lat=${lat}&fields=${fields}`)
-    const data = await response.json();
-    return data
+    try {
+        const response = await fetch(`${BASE_URL}/weather/nowcast?lon=${lon}&lat=${lat}&fields=${fields}`, options)
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 // Hourly Forecast
 export async function getHourlyForecast(lat, lon, fields) {
-
+    try {
+        const response = await fetch(`${BASE_URL}/weather/forecast/hourly?lat=${lat}&lon=${lon}&fields=${fields}`, options)
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 // Realtime
 export async function getCurrentWeather(lat, lon, fields) {
-
+    try {
+        const response = await fetch(`${BASE_URL}/weather/realtime?lat=${lat}&lon=${lon}&fields=${fields}`, options)
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.log(error)
+    }
 }
