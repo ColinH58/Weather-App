@@ -1,9 +1,13 @@
 import React from 'react'
+import { Search, Forecast, Loading, Error } from "./index"
 
 const Home = () => {
   return (
     <div>
-        <h1>This will be the main landing page to show the returned information</h1>
+        <Search />
+        <Forecast />
+        {/* {isLoading && <Loading />} */}
+        {/* {isError && <Error />} */}
     </div>
   )
 }
