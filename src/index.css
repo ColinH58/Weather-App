@@ -93,7 +93,7 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     line-height: 0rem;
 }
 
@@ -143,4 +143,6 @@ input {
 
 .Pipe {
     font-size: 1.25rem;
+    margin-left: 2px;
+    margin-right: 2px;
 }

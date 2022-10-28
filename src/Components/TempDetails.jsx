@@ -23,16 +23,13 @@ const TempDetails = () => {
         <div>
           <p className="Temperature">25°</p>
           <div className="HighLow">
-            <div className="ReadOutLine">
-              <UilArrowUp className="ReadOutIcon" />
-              High:
-              <span className="ReadOutInfo">28°</span>
-            </div>
-            <div className="ReadOutLine">
-              <UilArrowDown className="ReadOutIcon" />
-              Low:
-              <span className="ReadOutInfo">19°</span>
-            </div>
+            <UilArrowUp className="ReadOutIcon" />
+            High:
+            <span className="ReadOutInfo">28°</span>
+            <p className="Pipe">&nbsp;|</p>
+            <UilArrowDown className="ReadOutIcon" />
+            Low:
+            <span className="ReadOutInfo">19°</span>
           </div>
         </div>
         {/* Small Weather Information Block on the Right */}
