@@ -1,11 +1,16 @@
 import React from "react";
+import { UilSearchAlt, UilLocationPinAlt } from "@iconscout/react-unicons";
 
 const Search = () => {
   return (
-    <div>
-        <h1>This will be the search form</h1>
+    <div className="Search">
+      <div className="SearchInput">
+        <input type="text" placeholder="Search..." />
+        <UilSearchAlt className="Icon"/>
+        <UilLocationPinAlt className="Icon"/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Search;

@@ -11,15 +11,48 @@ html {
     justify-content: space-around;
 }
 
+.Search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Change Justify Content to Left if it conflicts with the C/F buttons */
+.SearchInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
     background-color: slategray;
     color: white;
     border: 0;
     padding: 5px;
+    margin: 5px;
 }
 
 button:hover {
     background: darkgray;
     text-decoration: none;
+    cursor: pointer;
     transition: color 100ms linear 50ms;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 2px;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.Icon {
+    padding: 2px;
+    margin: 2px;
+}
+
+.Icon:hover {
+    cursor: pointer;
 }
