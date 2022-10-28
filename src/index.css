@@ -42,6 +42,23 @@ html {
   justify-content: center;
 }
 
+.TempDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.CurrentConditionLabel {
+    color: lightgreen;
+    text-align: center;
+}
+
+.CurrentConditionReadOut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
 button {
   font-family: "Poppins", sans-serif;
   background: none;
@@ -64,12 +81,14 @@ input {
   box-shadow: 2px;
   outline: none;
   text-transform: capitalize;
+  width: 275px;
 }
 
 .Icon,
 .Unit {
   padding: 2px;
   margin: 2px;
+  width: 18px;
 }
 
 .Icon:hover,
@@ -79,5 +98,5 @@ input {
 }
 
 .pipe {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 }

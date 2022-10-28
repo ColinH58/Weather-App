@@ -1,6 +1,6 @@
 import React from 'react'
 import UilReact from '@iconscout/react-unicons/icons/uil-react'
-import { Search, Forecast, Navbar, TimeLocation } from "./index"
+import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index"
 // import { getCurrentWeather } from "../API"
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
         <Navbar />
         <Search />
         <TimeLocation />
+        <TempDetails />
         <Forecast />
         <UilReact size={150}/>
     </div>
