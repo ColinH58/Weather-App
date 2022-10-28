@@ -7,7 +7,7 @@ export const getCurrentWeather = async (lat, lon) => {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
-        },
+        }
     })
     const data = await response.json();
     return data
