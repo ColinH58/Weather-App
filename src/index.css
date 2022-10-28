@@ -99,9 +99,10 @@ html {
 
 .Forecast {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  text-transform: uppercase;
 }
 
 button {
@@ -152,4 +153,8 @@ input {
     font-size: 1.25rem;
     margin-left: 2px;
     margin-right: 2px;
+}
+
+hr {
+  width: 45vw;
 }

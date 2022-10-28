@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
 const Forecast = () => {
   return (
-    <div className='Forecast'>
-        <h1>This will be the forecast information</h1>
+    <div className="Forecast">
+      <div>
+        <p>Hourly Forecast</p>
+        <hr />
+      </div>
+      <div>
+        
+      </div>
+      <div>
+        <p>Daily Forecast</p>
+        <hr />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Forecast
+export default Forecast;
