@@ -1,5 +1,25 @@
 html {
-    background-color: navy;
+    background-color: slategrey;
     color: white;
     margin: auto;
+    width: 65vw;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    background-color: slategray;
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+
+button:hover {
+    background: darkgray;
+    text-decoration: none;
+    transition: color 100ms linear 50ms;
 }
