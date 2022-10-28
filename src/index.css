@@ -5,7 +5,7 @@ html {
   background-color: white;
   color: white;
   margin: 0 auto;
-  width: 50vw;
+  width: 60vw;
 }
 
 .HomeContainer {
@@ -56,7 +56,27 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.Temperature {
+    font-size: 3rem;
+}
+
+.ConditionIcon {
+    width: 50px;
+}
+
+.ReadOutBlock {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+}
+
+.ReadOutInfo {
+    margin: 2px;
+    font-weight: bolder;
 }
 
 button {
