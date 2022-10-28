@@ -1,13 +1,22 @@
 import React from "react";
-import { UilSearchAlt, UilLocationPinAlt } from "@iconscout/react-unicons";
+import {
+  UilSearchAlt,
+  UilLocationPinAlt,
+  UilCelsius,
+  UilFahrenheit,
+} from "@iconscout/react-unicons";
 
 const Search = () => {
+
   return (
     <div className="Search">
       <div className="SearchInput">
         <input type="text" placeholder="Search..." />
-        <UilSearchAlt className="Icon"/>
-        <UilLocationPinAlt className="Icon"/>
+        <UilSearchAlt className="Icon" />
+        <UilLocationPinAlt className="Icon" />
+        <UilCelsius className="Unit"/>
+        <h1>/</h1>
+        <UilFahrenheit className="Unit"/>
       </div>
     </div>
   );

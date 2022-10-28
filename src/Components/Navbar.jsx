@@ -4,11 +4,11 @@ const Navbar = () => {
   const cities = [
     {
       id: 1,
-      title: 'Calgary'
+      title: 'Tokyo'
     },
     {
       id: 2,
-      title: 'Denver'
+      title: 'Calgary'
     },
     {
       id: 3,
@@ -20,7 +20,7 @@ const Navbar = () => {
     },
     {
       id: 5,
-      title: 'New York'
+      title: 'London'
     },
   ]
 
