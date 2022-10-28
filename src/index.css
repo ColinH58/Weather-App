@@ -97,6 +97,13 @@ html {
     line-height: 0rem;
 }
 
+.Forecast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 button {
   font-family: "Poppins", sans-serif;
   background: none;
