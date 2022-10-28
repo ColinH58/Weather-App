@@ -9,7 +9,8 @@ const Home = () => {
         <Search />
         <TimeLocation />
         <TempDetails />
-        <Forecast />
+        <Forecast title="hourly forecast" />
+        <Forecast title="daily forecast" />
     </div>
   )
 }

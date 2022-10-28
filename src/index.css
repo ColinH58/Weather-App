@@ -45,6 +45,8 @@ html {
 .TempDetails {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+        width: 100%;
 }
 
 .CurrentConditionLabel {
@@ -67,7 +69,8 @@ html {
 }
 
 .ConditionIcon {
-    width: 50px;
+    width: 80px;
+    margin-right: 35px;
 }
 
 .ReadOutBlock {
@@ -101,8 +104,24 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   text-transform: uppercase;
+}
+
+.HourlyForecastContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.80rem;
+  width: 100%;
+}
+
+.HourlyForecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 button {

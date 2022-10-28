@@ -4,7 +4,7 @@ const TimeLocation = () => {
   return (
     <div className="TimeLocation">
       <div>
-        <p>Saturday, 15 November 2022 | 12:30 PM</p>
+        <p>Saturday, 15 November 2022 | 6:30 AM</p>
       </div>
       <div>
         <h2>Calgary, AB</h2>
