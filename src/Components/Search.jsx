@@ -15,7 +15,7 @@ const Search = () => {
         <UilSearchAlt className="Icon" />
         <UilLocationPinAlt className="Icon" />
         <UilCelsius className="Unit"/>
-        <p className="pipe">|</p>
+        <p className="Pipe">|</p>
         <UilFahrenheit className="Unit"/>
       </div>
     </div>

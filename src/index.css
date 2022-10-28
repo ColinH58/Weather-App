@@ -56,8 +56,7 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 25px;
+    justify-content: space-around;
 }
 
 .Temperature {
@@ -72,11 +71,23 @@ html {
     display: flex;
     flex-direction: column;
     font-size: 0.75rem;
+    align-items: center;
 }
 
 .ReadOutInfo {
-    margin: 2px;
+    margin-left: 2px;
     font-weight: bolder;
+}
+
+.ReadOutIcon {
+    margin-right: 2px;
+}
+
+.HighLow {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px;
 }
 
 button {
@@ -117,6 +128,6 @@ input {
   scale: 1.15;
 }
 
-.pipe {
+.Pipe {
     font-size: 1.25rem;
 }
