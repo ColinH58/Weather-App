@@ -1,63 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 html {
-    background-color: slategrey;
-    color: white;
-    margin: auto;
-    width: 50vw;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: white;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+.HomeContainer {
+  background-image: linear-gradient(to bottom right, slategray, black);
+  background-color: slategray;
+  padding: 25px;
 }
 
 .Navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .Search {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-/* Change Justify Content to Left if it conflicts with the C/F buttons */
 .SearchInput {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: auto;
+}
+
+.TimeLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
-    background-color: slategray;
-    color: white;
-    border: 0;
-    padding: 5px;
-    margin: 5px;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  color: white;
+  border: 0;
+  padding: 5px;
+  margin: 5px;
 }
 
 button:hover {
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 100ms linear 50ms;
-    scale: 1.15;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 100ms linear 50ms;
+  scale: 1.15;
 }
 
 input {
-    margin: 5px;
-    padding: 5px;
-    box-shadow: 2px;
-    outline: none;
-    text-transform: capitalize;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 2px;
+  outline: none;
+  text-transform: capitalize;
 }
 
 .Icon,
 .Unit {
-    padding: 2px;
-    margin: 2px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .Icon:hover,
 .Unit:hover {
-    cursor: pointer;
-    scale: 1.15;
+  cursor: pointer;
+  scale: 1.15;
+}
+
+.pipe {
+    font-size: 1.75rem;
 }

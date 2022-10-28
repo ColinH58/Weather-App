@@ -8,7 +8,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      title: 'Calgary'
+      title: 'Seattle'
     },
     {
       id: 3,
@@ -16,7 +16,7 @@ const Navbar = () => {
     },
     {
       id: 4,
-      title: 'Toronto'
+      title: 'Boston'
     },
     {
       id: 5,
