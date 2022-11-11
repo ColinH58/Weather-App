@@ -38,6 +38,8 @@ const formatCurrentWeather = (data) => {
 
 const getFormattedWeatherData = async (searchParams) => {
   const formattedCurrentWeather = await getWeatherData("weather", searchParams).then(formatCurrentWeather)
+
+  return formattedCurrentWeather
 }
 
 export default getFormattedWeatherData;

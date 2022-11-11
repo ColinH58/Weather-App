@@ -3,6 +3,12 @@ import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index"
 import getFormattedWeatherData from '../API/WeatherServicesApi'
 
 const Home = () => {
+  const fetchWeather = async () => {
+    const data = await getFormattedWeatherData({ q: "calgary" });
+    console.log(data);
+  }
+
+  fetchWeather();
 
   return (
     <div className="HomeContainer">
