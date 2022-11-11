@@ -1,5 +1,10 @@
+import { DateTime } from "luxon";
+
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 const KEY = "0cce63ace2ee37502397fdf44a8d86a2";
+
+const iconUrlFromCode = (code) =>
+  `http://openweathermap.org/img/wn/${code}@2x.png`;
 
 const getWeatherData = (infoType, searchParams) => {
   const url = new URL(BASE_URL + "/" + infoType);
@@ -75,18 +80,15 @@ const getFormattedWeatherData = async (searchParams) => {
     units: searchParams.units,
   }).then(formatForecastWeather);
 
-//   return { ...formattedCurrentWeather, ...formattedForecastWeather };
+  return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
 
-// const formatToLocalTime = (
-//   secs,
-//   zone,
-//   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-// ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+//This is from the Luxon API to convert time and date for the application
+const formatToLocalTime = (
+  secs,
+  zone,
+  format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
+) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
-// const iconUrlFromCode = (code) =>
-//   `http://openweathermap.org/img/wn/${code}@2x.png`;
-
-// export default getFormattedWeatherData;
-
-// export { formatToLocalTime, iconUrlFromCode };
+export default getFormattedWeatherData;
+export { formatToLocalTime, iconUrlFromCode };
