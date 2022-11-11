@@ -1,25 +1,37 @@
-import React from 'react'
-import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index"
-import getFormattedWeatherData from '../API/WeatherServicesApi'
+import React, { useState, useEffect } from "react";
+import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index";
+import getFormattedWeatherData from "../API/WeatherServicesApi";
 
 const Home = () => {
-  const fetchWeather = async () => {
-    const data = await getFormattedWeatherData({ q: "calgary" });
-    console.log(data);
-  }
+  const [query, setQuery] = useState({ q: "toronto" });
+  const [units, setUnits] = useState("metric");
+  const [weather, setWeather] = useState(null);
 
-  fetchWeather();
+  useEffect(() => {
+    const fetchWeather = async () => {
+      await getFormattedWeatherData({ ...query, units }).then((data) => {
+        setWeather(data);
+      });
+    };
+
+    fetchWeather();
+  }, [query, units]);
 
   return (
     <div className="HomeContainer">
-        <Navbar />
-        <Search />
-        <TimeLocation />
-        <TempDetails />
-        <Forecast title="hourly forecast" />
-        <Forecast title="daily forecast" />
-    </div>
-  )
-}
+      <Navbar />
+      <Search />
 
-export default Home
+      {weather && (
+        <div className="HomeContainer">
+          <TimeLocation />
+          <TempDetails />
+          <Forecast title="hourly forecast" />
+          <Forecast title="daily forecast" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Home;
