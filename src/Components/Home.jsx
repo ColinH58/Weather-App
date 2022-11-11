@@ -3,7 +3,7 @@ import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index";
 import getFormattedWeatherData from "../API/WeatherServicesApi";
 
 const Home = () => {
-  const [query, setQuery] = useState({ q: "dallas" });
+  const [query, setQuery] = useState({ q: "calgary" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 

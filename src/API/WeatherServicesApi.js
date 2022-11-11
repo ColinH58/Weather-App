@@ -1,10 +1,7 @@
 import { DateTime } from "luxon";
 
-// Test the API Call
-// https://api.openweathermap.org/data/2.5//weather?q=dallas&units=metric&appid=541e8320def8c8d12c75021f49f227ad
-
-const BASE_URL = "https://api.openweathermap.org/data/2.5/";
-const KEY = "541e8320def8c8d12c75021f49f227ad";
+const BASE_URL = "https://api.openweathermap.org/data/2.5";
+const KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
 const iconUrlFromCode = (code) =>
   `http://openweathermap.org/img/wn/${code}@2x.png`;
@@ -49,7 +46,7 @@ const formatCurrentWeather = (data) => {
 
 const formatForecastWeather = (data) => {
   let { timezone, daily, hourly } = data;
-  daily = daily.slice(1, 6).map((d) => {
+  daily = daily.slice(1, 6).map(d => {
     return {
       title: formatToLocalTime(d.dt, timezone, "ccc"),
       temp: d.temp.day,
@@ -57,7 +54,7 @@ const formatForecastWeather = (data) => {
     };
   });
 
-  hourly = hourly.slice(1, 6).map((d) => {
+  hourly = hourly.slice(1, 6).map(d => {
     return {
       title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
       temp: d.temp,
@@ -76,7 +73,7 @@ const getFormattedWeatherData = async (searchParams) => {
 
   const { lat, lon } = formattedCurrentWeather;
 
-  const formattedForecastWeather = await getWeatherData("onecall", {
+  const formattedForecastWeather = await getWeatherData('onecall', {
     lat,
     lon,
     exclude: "current,minutely,alerts",
