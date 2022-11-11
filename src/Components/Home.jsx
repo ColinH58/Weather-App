@@ -1,5 +1,6 @@
 import React from 'react'
 import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index"
+import getFormattedWeatherData from '../API/WeatherServicesApi'
 
 const Home = () => {
 
