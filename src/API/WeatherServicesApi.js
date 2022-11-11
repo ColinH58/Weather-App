@@ -1,7 +1,10 @@
 import { DateTime } from "luxon";
 
+// Test the API Call
+// https://api.openweathermap.org/data/2.5//weather?q=dallas&units=metric&appid=541e8320def8c8d12c75021f49f227ad
+
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
-const KEY = "0cce63ace2ee37502397fdf44a8d86a2";
+const KEY = "541e8320def8c8d12c75021f49f227ad";
 
 const iconUrlFromCode = (code) =>
   `http://openweathermap.org/img/wn/${code}@2x.png`;
