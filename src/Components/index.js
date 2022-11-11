@@ -1,7 +1,6 @@
 export { default as Home } from "./Home"
 export { default as Search } from "./Search"
 export { default as Forecast } from "./Forecast"
-export { default as Loading } from "./Loading"
 export { default as Navbar } from "./Navbar"
 export { default as TimeLocation } from "./TimeLocation"
 export { default as TempDetails } from "./TempDetails"
