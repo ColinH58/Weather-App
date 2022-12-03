@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index";
-import getFormattedWeatherData from "../API/WeatherServicesApi";
+// import getFormattedWeatherData from "../API/WeatherServicesApi";
+import getWeatherData from "../API/WeatherServicesApi";
 
 const Home = () => {
   const [query, setQuery] = useState({ q: "calgary" });
@@ -9,25 +10,33 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      await getFormattedWeatherData({ ...query, units }).then((data) => {
-        setWeather(data);
+      await getWeatherData("weather", query).then((data) => {
+        setWeather(data)
       });
-    };
+    }
+    fetchWeather()
+  }, [query, units])
 
-    fetchWeather();
-  }, [query, units]);
+  // useEffect(() => {
+  //   const fetchWeather = async () => {
+  //     await getFormattedWeatherData({ ...query, units }).then((data) => {
+  //       setWeather(data);
+  //       console.log(data)
+  //     });
+  //   };
+  //   fetchWeather();
+  // }, [query, units]);
 
   return (
     <div className="HomeContainer">
       <Navbar />
       <Search />
-
       {weather && (
         <div className="HomeContainer">
-          <TimeLocation />
-          <TempDetails />
-          <Forecast title="hourly forecast" />
-          <Forecast title="daily forecast" />
+          <TimeLocation weather={weather} setWeather={setWeather} />
+          <TempDetails weather={weather} setWeather={setWeather} />
+          <Forecast title="hourly forecast" weather={weather} setWeather={setWeather} />
+          <Forecast title="daily forecast" weather={weather} setWeather={setWeather} />
         </div>
       )}
     </div>

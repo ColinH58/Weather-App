@@ -7,7 +7,7 @@ import {
   UilWind,
 } from "@iconscout/react-unicons";
 
-const TempDetails = () => {
+const TempDetails = ({ weather, setWeather }) => {
   return (
     <div className="TempDetails">
       {/* Condition Readout, In Accent Color */}
