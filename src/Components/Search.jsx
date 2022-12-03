@@ -1,28 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   UilSearchAlt,
-  UilLocationPinAlt,
-  UilCelsius,
-  UilFahrenheit,
+  // UilLocationPinAlt,
+  // UilCelsius,
+  // UilFahrenheit,
 } from "@iconscout/react-unicons";
 
 const Search = ({ setQuery }) => {
+  const [queryString, setQueryString] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setQuery(e.target.value)
-  }
+    e.preventDefault();
+    setQuery(queryString);
+  };
 
   return (
     <div className="Search">
       <div className="SearchInput">
-        <input type="text" placeholder="Search..." onSubmit={handleSubmit} />
-        <UilSearchAlt className="Icon" />
-        <UilLocationPinAlt className="Icon" />
+        <input
+          value={queryString}
+          onChange={(e) => setQueryString(e.currentTarget.value)}
+          type="text"
+          placeholder="Search..."
+        />
+        <UilSearchAlt
+          className="Icon"
+          input="submit"
+          type="submit"
+          onClick={handleSubmit}
+        />
+      </div>
+      {/* <UilLocationPinAlt className="Icon" />
         <UilCelsius className="Unit"/>
         <p className="Pipe">|</p>
-        <UilFahrenheit className="Unit"/>
-      </div>
+        <UilFahrenheit className="Unit"/> */}
     </div>
   );
 };

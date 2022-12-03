@@ -4,7 +4,7 @@ import { Search, Forecast, Navbar, TimeLocation, TempDetails } from "./index";
 import getWeatherData from "../API/WeatherServicesApi";
 
 const Home = () => {
-  const [query, setQuery] = useState({ q: "calgary" });
+  const [query, setQuery] = useState("Calgary");
   // const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -12,6 +12,7 @@ const Home = () => {
     const fetchWeather = async () => {
       await getWeatherData("weather", query).then((data) => {
         setWeather(data)
+        console.log(data)
       });
     }
     fetchWeather()
@@ -33,10 +34,10 @@ const Home = () => {
       <Search setQuery={setQuery} />
       {weather && (
         <div className="HomeContainer">
-          <TimeLocation weather={weather} setWeather={setWeather} query={query} setQuery={setQuery} />
-          <TempDetails weather={weather} setWeather={setWeather} query={query} setQuery={setQuery} />
-          <Forecast title="hourly forecast" weather={weather} setWeather={setWeather} query={query} setQuery={setQuery} />
-          <Forecast title="daily forecast" weather={weather} setWeather={setWeather} query={query} setQuery={setQuery} />
+          <TimeLocation weather={weather} query={query} setQuery={setQuery} />
+          <TempDetails weather={weather} query={query} setQuery={setQuery} />
+          <Forecast title="hourly forecast" weather={weather} query={query} setQuery={setQuery} />
+          <Forecast title="daily forecast" weather={weather} query={query} setQuery={setQuery} />
         </div>
       )}
     </div>
