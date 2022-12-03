@@ -1,6 +1,6 @@
 import React from "react";
 
-const Forecast = ({ title, weather, setWeather }) => {
+const Forecast = ({ title, weather, setWeather, query, setQuery }) => {
   return (
     <div className="Forecast">
       <div>

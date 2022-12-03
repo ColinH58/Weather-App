@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ query, setQuery }) => {
   const cities = [
     {
       id: 1,

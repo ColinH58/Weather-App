@@ -1,6 +1,6 @@
 import React from "react";
 
-const TimeLocation = ({ weather, setWeather }) => {
+const TimeLocation = ({ weather, setWeather, query, setQuery }) => {
   return (
     <div className="TimeLocation">
       <div>

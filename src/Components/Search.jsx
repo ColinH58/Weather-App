@@ -6,7 +6,7 @@ import {
   UilFahrenheit,
 } from "@iconscout/react-unicons";
 
-const Search = () => {
+const Search = ({ query, setQuery }) => {
 
   return (
     <div className="Search">
