@@ -6,12 +6,17 @@ import {
   UilFahrenheit,
 } from "@iconscout/react-unicons";
 
-const Search = ({ query, setQuery }) => {
+const Search = ({ setQuery }) => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setQuery(e.target.value)
+  }
 
   return (
     <div className="Search">
       <div className="SearchInput">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." onSubmit={handleSubmit} />
         <UilSearchAlt className="Icon" />
         <UilLocationPinAlt className="Icon" />
         <UilCelsius className="Unit"/>

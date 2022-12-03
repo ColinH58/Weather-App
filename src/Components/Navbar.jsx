@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = ({ query, setQuery }) => {
+const Navbar = ({ setQuery }) => {
   const cities = [
     {
       id: 1,
@@ -26,9 +26,10 @@ const Navbar = ({ query, setQuery }) => {
 
   return (
     <div className="Navbar">
-      {cities.map((city) => (
-        <button key={city.id}>{city.title}</button>
-      ))}
+      {cities.map((city) => {
+        return (
+        <button key={city.id} onClick={()=>setQuery(city.title)}>{city.title}</button>
+      )})}
     </div>
   )
 }

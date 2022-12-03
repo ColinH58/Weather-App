@@ -29,8 +29,8 @@ const Home = () => {
 
   return (
     <div className="HomeContainer">
-      <Navbar query={query} setQuery={setQuery} />
-      <Search query={query} setQuery={setQuery} />
+      <Navbar setQuery={setQuery} />
+      <Search setQuery={setQuery} />
       {weather && (
         <div className="HomeContainer">
           <TimeLocation weather={weather} setWeather={setWeather} query={query} setQuery={setQuery} />
