@@ -12,4 +12,4 @@ Make sure the data matches reality, time included
 
 Work on Styling the calls
 
-Move on to the next project!
+Move on to the next project...
