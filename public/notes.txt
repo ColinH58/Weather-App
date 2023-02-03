@@ -1,1 +1,13 @@
 notes here
+
+Stars with reintroducing self to code
+
+Figure out which API calls aren't completed and which aren
+
+Log out the API calls
+
+Organize the called back data into the components
+
+Make sure the data matches reality, time included
+
+Work on Styling the calls
