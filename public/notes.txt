@@ -1,4 +1,4 @@
-notes here
+Notes:
 
 Stars with reintroducing self to code
 
@@ -11,3 +11,5 @@ Organize the called back data into the components
 Make sure the data matches reality, time included
 
 Work on Styling the calls
+
+Move on to the next project!
